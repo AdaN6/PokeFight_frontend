@@ -9,8 +9,8 @@ function App() {
     <>
         <Routes>
             <Route index elemen={<Home />} />
-            {/* <Route path="pokemon/:id" />
-            <Route path="pokemon/:id/:info" /> */}
+            <Route path="pokemon/:id" />
+            <Route path="pokemon/:id/:info" />
         </Routes>
     </>
   );
