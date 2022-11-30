@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import axios from "axios";
-
+import Home from "./components/home.js";
 
 function App() {
 
@@ -8,11 +7,11 @@ function App() {
 
   return (
     <>
-        {/* <Routes>
-            <Route index path="home" />
-            <Route path="pokemon/:id" />
-            <Route path="pokemon/:id/:info" />
-        </Routes> */}
+        <Routes>
+            <Route index elemen={<Home />} />
+            {/* <Route path="pokemon/:id" />
+            <Route path="pokemon/:id/:info" /> */}
+        </Routes>
     </>
   );
 }
