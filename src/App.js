@@ -1,15 +1,18 @@
 import { Routes, Route } from "react-router-dom";
+import axios from "axios";
+
 
 function App() {
+
+
+
   return (
     <>
-        <Routes>
-          <div>
-            <Route index />
+        {/* <Routes>
+            <Route index path="home" />
             <Route path="pokemon/:id" />
             <Route path="pokemon/:id/:info" />
-          </div>
-        </Routes>
+        </Routes> */}
     </>
   );
 }
