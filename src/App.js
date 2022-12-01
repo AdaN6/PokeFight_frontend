@@ -11,10 +11,8 @@ function App() {
     pokemonApi1().then((result) => setData(result));
   }, []);
 
-  const testId = data.data?[0].id
-
   // console.log(data);
-  console.log(testId);
+  console.log(data.data?.[0].id);
 
 
   //data.data[0].id
