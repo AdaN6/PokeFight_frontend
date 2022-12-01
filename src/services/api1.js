@@ -12,7 +12,7 @@ import axios from "axios";
 
 
 const pokeApiUrl = "https://lalala.cyclic.app/pokemon";
-export const pokemonApi2 = async () => {
+export const pokemonApi1 = async () => {
   try {
     const result = await axios(pokeApiUrl).then((data) => data);
     if (!result)
@@ -26,4 +26,4 @@ export const pokemonApi2 = async () => {
   }
 };
 
-pokemonApi2();
+pokemonApi1();
