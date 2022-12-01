@@ -19,7 +19,7 @@ export const pokemonApi1 = async () => {
       throw new Error(
         `Fail to get datas with a status of ${result.status}`
       );
-    console.log(result);
+    // console.log(result);
     return result;
   } catch (error) {
     console.warn(error);

@@ -13,12 +13,12 @@ function App() {
     pokemonApi1().then((result) => setData(result));
   }, []);
 
-  const testing = data.data?.[0].id
+  // const testing = data.data?.[0].id
 
   // console.log(data);
-  console.log(
-    `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${testing}.png`
-  );
+  // console.log(
+  //   `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${testing}.png`
+  // );
 
   return (
     <>

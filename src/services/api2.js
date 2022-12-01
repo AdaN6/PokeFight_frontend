@@ -7,8 +7,7 @@ export const pokemonApi2 = async () => {
      const result = await axios(pokeApi2Url).then((data) => data);
      if (!result)
        throw new Error(`Fail to get datas with a status of ${result.status}`);
-
-     console.log(result);
+       
      return result;
    } catch (error) {
      console.warn(error);
