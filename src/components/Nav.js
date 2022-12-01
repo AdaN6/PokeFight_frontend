@@ -6,7 +6,7 @@ const Nav = () => {
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
     <div className="container flex flex-wrap items-center justify-between mx-auto">
     <a href="https://flowbite.com/" className="flex items-center">
-        <img src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png" className="h-20 mr-3 " alt="Flowbite Logo" />
+        <img src="http://ih3.redbubble.net/image.9946340.4061/sticker,375x360.png" className="h-20 mr-3 " alt="Flowbite Logo" />
     </a>
     <div className="flex md:order-2">
         <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1" >

@@ -15,9 +15,9 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center">
-      Welcome to the Pokemon App
-      </h1>
+      <div className="flex justify-center">
+      <img src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png" className="items-center w-auto h-60 " alt="Flowbite Logo" />
+      </div>
       <div className= "flex flex-wrap ">
         {data.data?.map(pokemon =>(
           <div key={pokemon.id} className=" flex-auto m-2 h-54 w-44 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
