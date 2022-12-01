@@ -40,7 +40,7 @@ const Nav = () => {
             <a href="/Arena" className="right-0 block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Battle Arena</a>
             </li>
             <li>
-            <a href="/about" className="right-0 block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">About Us</a>
+            <a href="/About" className="right-0 block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">About Us</a>
             </li>
         </ul>
         </div>
