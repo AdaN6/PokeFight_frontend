@@ -5,17 +5,20 @@ import axios from "axios";
 function App() {
 //only for testing
 const pokeApiUrl = "https://lalala.cyclic.app/pokemon";
+const pokemonApi2 = async () => {
  try { 
-  const pokemonApi2 = async () => {
+  
   const result = await axios.get(pokeApiUrl).then((data) => data);
 if (!result) 
   throw new Error (`Fail to get datas with a status of ${result.request.status}`);
 console.log(result)
 return result;
-pokemonApi2();
-}} catch (error) {
+
+} catch (error) {
     console.warn(error);
   }
+}
+pokemonApi2();
 
   return (
     <>
