@@ -16,7 +16,7 @@ function Pokemon() {
     });
   }, [id]);
 
-
+ 
   if (!pokemon) return <h2>Loading...</h2>;
 
 
