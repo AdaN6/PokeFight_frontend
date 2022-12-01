@@ -3,7 +3,9 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      Heyho
+      <h1 className="text-3xl font-bold underline">
+      Welcome to the Pokemon App
+      </h1>
     </div>
   )
 }

@@ -31,7 +31,7 @@ function App() {
     </>
   );
 
-  function newFunction() {}
+
 }
 
 export default App;
