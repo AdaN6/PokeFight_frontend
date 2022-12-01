@@ -7,8 +7,7 @@ function App() {
 const pokeApiUrl = "https://lalala.cyclic.app/pokemon";
 const pokemonApi2 = async () => {
  try { 
-  
-  const result = await axios.get(pokeApiUrl).then((data) => data);
+  const result = await axios(pokeApiUrl).then((data) => data);
 if (!result) 
   throw new Error (`Fail to get datas with a status of ${result.request.status}`);
 console.log(result)
