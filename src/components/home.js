@@ -20,7 +20,7 @@ const Home = () => {
       </h1>
       <div className= "flex flex-wrap ">
         {data.data?.map(pokemon =>(
-          <div key={pokemon.id} className=" basis-1/6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+          <div key={pokemon.id} className=" flex-auto m-2 h-54 w-44 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
               <a className="flex items-center justify-center" href="">
                   <img className="rounded-t-lg " src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt={pokemon.name.english} />
               </a>
