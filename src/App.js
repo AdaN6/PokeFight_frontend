@@ -1,10 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import {useState, useEffect} from "react"; 
-import Home from "./components/Home.js";
 import { pokemonApi1 } from "./services/api1.js";
+
+import Home from "./components/Home.js";
 import Nav from "./components/Nav.js";
 import Pokemon from "./components/Pokemon.js";
 import PokemonInfo from "./components/PokemonInfo.js";
+import About from "./components/About.js";
+import Arena from "./components/Arena.js";
 
 function App() {
   const [data, setData] = useState({});
@@ -27,6 +30,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="pokemon/:id" element={<Pokemon />} />
         <Route path="pokemon/:id/:info" element={<PokemonInfo />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/arena" element={<Arena />}/>
       </Routes>
     </>
   );

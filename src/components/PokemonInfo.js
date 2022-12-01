@@ -4,7 +4,7 @@ import React from 'react';
 
 const PokemonInfo = () => {
   return (
-    <div>
+    <div className='text-center'>
       PokemonInfo
     </div>
   )
