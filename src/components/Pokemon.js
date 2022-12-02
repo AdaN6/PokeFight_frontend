@@ -25,7 +25,7 @@ function Pokemon() {
       <div className="bg-yellow-500 flex justify-center" key={id}>
         <div key={pokemon.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
              <a className="flex items-center justify-center" href="">
-                 <img className="rounded-t-lg" width={400} height={250} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt={pokemon.name.english} />
+                 <img className="rounded-t-lg" width={600} height={650} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`} alt={pokemon.name.english} />
             </a>
              <div className="p-5">
                  <a href="#">

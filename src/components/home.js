@@ -22,10 +22,9 @@ const Home = () => {
       <div className="flex flex-wrap ">
         {data.data?.map((pokemon) => (
           <div
-            key={pokemon.id}
-            className=" flex-auto m-2 h-54 w-44 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a className="flex items-center justify-center" href="/">
-              <img className="rounded-t-lg " src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`} alt={pokemon.name.english} />
+            key={pokemon.id} className=" flex-auto m-2 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <a className="flex items-center justify-center w-40  m-5"  href="/">
+              <img className="rounded-t-lg object-fill h-28" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`} alt={pokemon.name.english} />
             </a>
             <div className="p-5">
               <a href="/">
