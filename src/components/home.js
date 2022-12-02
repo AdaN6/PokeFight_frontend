@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import { pokemonApi1 } from "./services/api1.js";
+import {pokemonLs} from "./pokemonLs.js";
 
 
 const home = () => {
@@ -18,15 +19,9 @@ const home = () => {
   //   `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${testing}.png`
   // );
 
-  data.data?.map(res => res.data.name)
+  
 
-  return (
-  <>
-    <div>
-      Heyho
-    </div>
-  </>
-  );
+  return data.data?.map((resId) => <pokemonLs key={resId} resId={resId}/>);
 }
 
 export default home
