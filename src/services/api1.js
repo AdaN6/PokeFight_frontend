@@ -26,6 +26,8 @@ export const pokemonApi1 = async () => {
   }
 };
 
+
+
 pokemonApi1();
 
 // const imageURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${POKEMONINDEX}.png`
