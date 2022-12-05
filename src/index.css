@@ -1,3 +1,161 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pkmn__card {
+	width: 370px;
+	height: 650px;
+	background: white;
+	margin: 1rem auto;
+	padding: 0.5rem 0;
+}
+
+.pkmn__container {
+	width: 21rem;
+	height: 39rem;
+	background-image: url("./IMG/details.png");
+	background-size: 100% 100%;
+	margin: 1rem auto;
+	padding-top: 1rem;
+	border-radius: 0.5rem;
+    border: #f4f40a solid 6px;
+}
+
+.pkmn__picture {
+    width: 14rem;
+	height: 17.7rem;
+	margin: 0 auto;	 
+
+}
+
+.pkmn__png {
+    margin-top: -3rem;
+    margin-bottom: -3rem;
+    width: 15rem;
+    height: 17rem; 
+    padding: 0.5rem;
+}
+
+.pkmn__exp-bar{
+	width: 17rem;
+	height: 17rem;
+	border-style: solid;
+	border-color: white rgba(255, 255, 255, 0.15) transparent rgb(254, 254, 254);
+	border-radius: 50%;
+	margin-left: -1.6rem;
+	margin-top: -10.7rem;
+	}
+
+.pkmn__cp {
+	text-align: right;
+	color: white;
+    margin-bottom: 15px;
+}
+
+.size-medium {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+span {
+	font-size: 1.5rem;
+}
+.pkmn__info {
+	width: 20rem;
+	background: white;
+    
+	margin: 0 auto;
+	border-radius: 0.5rem;
+	padding: 1.5rem 0 1rem 0;
+}
+
+.pkmn__name{
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.space{
+    background-color: white;
+}
+.pkmn__name::before{
+	content: "";
+	width: 12rem;
+	height: 0.5rem;
+	border-radius: 0.5rem;
+	background: #6FEDB8;
+	margin-top: 2.2rem;
+	margin-left: -2.3rem;
+	position: absolute;
+
+}
+.size-medium {
+	font-size: 0.8rem;
+	color: #3F4240;
+}
+
+.pkmn__data {
+	width: 20rem;
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 0.8rem;
+
+}
+.pkmn__type, .pkmn__weight, .pkmn__height {
+	width: 5.1rem;
+	text-align: center;
+	font-size: 0.9rem;
+	border-right: solid 0.1rem rgba(0, 0, 0, 0.16);
+}
+.pkmn__type {
+	width: 6.8rem;
+}
+
+.pkmn__height {
+	border-right: none;
+}
+
+.pkmn___status {
+	width: 18rem;
+	height: 4rem;
+	display: flex;
+	border-top: solid 0.1rem rgba(0, 0, 0, 0.16);
+	padding-top: 0.8rem;
+	margin: 0 auto 0 auto;
+}
+
+.text--small {
+	margin-top: 0rem;
+	font-size: 0.7rem;
+	color: #3F4240;
+}
+
+.pkmn__move{
+	width: 17rem;
+	margin: 0 auto 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.move__special::before {
+	content: '';
+	width: 6rem;
+	height: 0.5rem;
+	position: absolute;
+	background: #66B8FA;
+	margin-top: 0.37rem;
+	margin-left: 7rem;
+	border: solid 0.12rem #B8C9FF;
+	border-radius: 0.4rem;
+}
+
+.move--mtop {
+	margin-top: 0;
+	color: #B2B6B4;
+	margin-bottom: 0.5rem;
+}
+
+.space{
+	margin-top: 1.2rem;
+	padding-top: 1.2rem;
+	border-top: solid 0.1rem rgba(0, 0, 0, 0.16);
+}
