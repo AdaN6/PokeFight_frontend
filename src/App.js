@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 import { pokemonApi1 } from "./services/api1.js";
 import index from "./index.css"
 
-import Home from "./components/Home.js";
+import Home from "./components/home.js";
 import Nav from "./components/Nav.js";
 import Pokemon from "./components/Pokemon.js";
 import PokemonInfo from "./components/PokemonInfo.js";
