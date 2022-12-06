@@ -14,7 +14,7 @@ function Pokemon2() {
   }, [id]);
  
   if (!pokemon) return <h2>Loading...</h2>;
-
+  console.log(pokemon.base)
   return (
     <div className="card">
         <div className="pkmn__container" key={id}>
@@ -33,11 +33,11 @@ function Pokemon2() {
 				    </div>
 			<div className="pkmn__move space">
 				<div>Sp Attack<p className="move--mtop">Sp Attack</p></div>
-				<div>40</div>
+				<div>{pokemon.base['Sp. Attack']}</div>
 			</div>
 			    <div className="pkmn__move">
 					<div className=" move__special">Sp Defense<p className="move--mtop">Sp Defense</p></div>
-					<div className="">150</div>
+					<div className="">{pokemon.base['Sp. Defense']}</div>
 				</div>
 			</div>
         </div>
