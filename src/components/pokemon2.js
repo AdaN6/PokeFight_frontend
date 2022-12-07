@@ -21,9 +21,8 @@ function Pokemon2() {
         <img
           src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png"
           className="items-center w-auto h-48"
-          alt="Pokemon Logo"
-        />
-      </div>
+          alt="Pokemon Logo"/>
+        </div>
     <div className="card">
         <div className="pkmn__container" key={id}>
 			<div className="pkmn__picture">
