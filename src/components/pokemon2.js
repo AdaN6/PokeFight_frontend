@@ -16,6 +16,14 @@ function Pokemon2() {
   if (!pokemon) return <h2>Loading...</h2>;
   console.log(pokemon.base)
   return (
+	<div className="bg-yellow-500 h-screen">
+		<div className="flex justify-center">
+        <img
+          src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png"
+          className="items-center w-auto h-48"
+          alt="Pokemon Logo"
+        />
+      </div>
     <div className="card">
         <div className="pkmn__container" key={id}>
 			<div className="pkmn__picture">
@@ -24,7 +32,7 @@ function Pokemon2() {
 				<div className="pkmn__exp-bar"></div>				
 			</div>
 			<div className="pkmn__info">
-					<div className="pkmn__name">{pokemon.name.english}<p className="size-medium">Type: {pokemon.type}</p></div>
+					<div className="pkmn__name">{pokemon.name.english}<p className="size-medium">Type: {pokemon.type[0]} {pokemon.type[1]}</p></div>
 					<div className="pkmn__data">
 						<div className="pkmn__type">{pokemon.base.Attack}<p className="text--small">Atack</p></div>
 						<div className="pkmn__weight">{pokemon.base.Defense}<p className="text--small">Defense</p></div>
@@ -41,6 +49,7 @@ function Pokemon2() {
 				</div>
 			</div>
         </div>
+	</div>
 	</div>
   );
 }

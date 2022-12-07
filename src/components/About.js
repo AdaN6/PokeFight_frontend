@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className='bg-yellow-500'>
+    <div className='bg-yellow-500 w-full h-screen'>
       <div className="flex justify-center">
         <img
           src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png"
@@ -12,9 +12,8 @@ const About = () => {
       </div>
       <div className='text-center flex justify-center'>
         
-<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-    <div class="flex justify-end px-4 pt-4">
-    </div>
+<div class="m-11 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-end px-4 pt-4"></div>
     <div class="flex flex-col items-center pb-10">
         <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={require('../IMG/ada.png')} alt="Bonnie image"/>
         <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Ada 🦘</h5>
@@ -26,7 +25,7 @@ const About = () => {
     </div>
 </div>
 
-<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="m-11 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <div class="flex justify-end px-4 pt-4">
     </div>
     <div class="flex flex-col items-center pb-10">
@@ -40,7 +39,7 @@ const About = () => {
     </div>
 </div>
 
-  <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+  <div class="m-11 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
       <div class="flex justify-end px-4 pt-4"></div>
       <div class="flex flex-col items-center pb-10">
           <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={require('../IMG/vale.png')} alt="Bonnie image"/>

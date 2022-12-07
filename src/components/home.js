@@ -36,13 +36,13 @@ const Home = () => {
       <div className="flex justify-center">
         <img
           src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png"
-          className="items-center w-auto h-60 "
+          className="items-center w-auto h-48 "
           alt="Pokemon Logo"
         />
       </div>
       <div className="flex flex-wrap ">
         {data.data?.map((pokemon) => (
-          <div key={pokemon.id} className=" flex-auto m-2 border-2 border-black rounded-lg shadow-md" style={{backgroundColor: 'white'}}>
+          <div key={pokemon.id} className=" flex-auto m-2 border-2 border-black rounded-lg shadow-md" style={{backgroundColor: colorType[pokemon.type[0]]}}>
             <a className="flex items-center justify-center w-36  m-6"  href="/">
               <img className="rounded-t-lg object-fill h-28" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.id}.svg`} alt={pokemon.name.english} />
             </a>
