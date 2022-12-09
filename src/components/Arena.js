@@ -21,30 +21,8 @@ const Arena = () => {
   if (data) {
     //giconsole.log( ...data);
   }
-  
-//console.log(randomId)
-
-const pointsPlayer2 = 200 //we should pass the pokemon id
 
 
-
- function battle ( pointsPlayer2){
-let randomId = Math.floor(Math.random() * 300)
-let pointsPlayer1 = randomId;
-  console.log(pointsPlayer1)
-  if(pointsPlayer1 > pointsPlayer2){
-      alert("Player one win ") 
-  }else if(pointsPlayer1 < pointsPlayer2){
-      alert("Player two win ") 
-  }else if (pointsPlayer1 === pointsPlayer2){
-     alert("It's tie")
-  }else{
-    alert('something went wrong!')
-  }
-  }
-  
-  //battle(pointsPlayer1,pointsPlayer2)
-  //console.log(battle)
   return (
     <>
       {
