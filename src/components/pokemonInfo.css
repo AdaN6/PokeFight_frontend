@@ -1,0 +1,42 @@
+.body{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    background-color: red;
+    
+}
+image{
+    padding: 20px;
+}
+
+.container{
+    background-color:white;
+    display: flex;
+    color: black;
+    justify-content: space-around;
+    width:auto;
+    padding: 0 90px;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+}
+.piccolo{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 800px;
+   justify-content: center;
+}
+.container-ability{
+    display: flex;
+    padding: 18px;
+    display: flex;
+    border: 2px solid gainsboro;
+    border-radius: 20px;
+    margin-top: 32px;
+    width: 500px;
+    justify-content: space-around;
+}
