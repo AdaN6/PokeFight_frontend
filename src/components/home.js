@@ -30,7 +30,7 @@ const Home = () => {
     pokemonApi1().then((result) => setData(result));
   }, []);
 
-  console.log(data.data?.[0])
+  // console.log(data.data?.[0])
   return (
     <div className="bg-yellow-500">
       <div className="flex justify-center">
