@@ -5,7 +5,7 @@ import Home from "./components/home.js";
 import Nav from "./components/Nav.js";
 import PokemonInfo from "./components/PokemonInfo.js";
 import About from "./components/About.js";
-import Arena2 from "./components/Arena.js";
+import Arena from "./components/Arena.js";
 import Pokemon2 from "./components/pokemon2.js";
 
 
@@ -19,7 +19,7 @@ function App() {
         <Route path="pokemon/:id" element={<Pokemon2 />} />
         <Route path="pokemon/:id/:info" element={<PokemonInfo />}/>
         <Route path="/about" element={<About />}/>
-        <Route path="/arena" element={<Arena2 />}/>
+        <Route path="/arena" element={<Arena />}/>
       </Routes>
     </>
   );

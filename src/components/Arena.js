@@ -24,7 +24,7 @@ const Arena2 = () => {
     //giconsole.log( ...data);
   }
 
-const Arena = () => {
+
   
   const [pokemon, setPokemon] = useState();
 
@@ -127,7 +127,7 @@ const Arena = () => {
         </div>
       </div>
   }
-}
+
 }
 
 export default Arena2
