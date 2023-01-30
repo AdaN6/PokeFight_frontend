@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .pkmn__card {
 	width: 370px;
 	height: 650px;
