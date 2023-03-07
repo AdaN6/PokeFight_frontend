@@ -11,11 +11,11 @@ The Pokemon World Website features a visually appealing and user-friendly interf
 . Dynamically fetched information from the API, ensuring that users have access to the most up-to-date and accurate information available.
 . Easy navigation through the collection of Pokemon.
 
-# Credits
+# Technologies Used
 The Pokemon World Website was built using the following technologies:
 
-.  NodeJS API
-.  ExpressJS
-.  React
-.  Tailwind
-.  The Pokemon World API was used to fetch the information on the Pokemon.
+- NodeJS API
+- ExpressJS
+- React
+- Tailwind
+- The Pokemon World API was used to fetch the information on the Pokemon.
