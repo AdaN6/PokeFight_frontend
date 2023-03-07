@@ -1,4 +1,4 @@
-# Pokemon World Website
+# Pokemon Website
 
 This dynamic and interactive website showcases the world of Pokemon, featuring a rich and detailed database of information on each of the beloved creatures. Built using NodeJS API and ExpressJS for the back-end, and React and Tailwind for the front-end, this site serves as a comprehensive resource for all things Pokemon. The information is dynamically fetched from the API, ensuring that users have access to the most up-to-date and accurate information available.
 
