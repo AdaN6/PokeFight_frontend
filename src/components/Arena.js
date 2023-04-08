@@ -47,7 +47,8 @@ const Arena = () => {
 
   return (
     <div className='bg-yellow-500 arena-container'>
-      <div className=' w-screen h-screen'>
+      {startGame ?
+        <div className=' w-screen pb-8'>
         <div className='flex text-center justify-center text-white text-8xl'>
           <img src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png" className="items-center w-auto h-48 " alt="Flowbite Logo" />
         </div>
@@ -69,15 +70,37 @@ const Arena = () => {
 
         </div>
         
-        {startGame ?
-          <div className='flex justify-center'>
+        <div className='flex justify-center'>
           <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={battle}>Try Again</button>
           </div>
-          :
-          <div className='flex justify-center'>
+        </div>
+        :
+        <div className=' w-screen h-screen'>
+        <div className='flex text-center justify-center text-white text-8xl'>
+          <img src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png" className="items-center w-auto h-48 " alt="Flowbite Logo" />
+        </div>
+          <div className='flex justify-around'>
+          {/* 1 pokemon card */}
+          {
+            startGame ?
+              <Card pokemon={player1} />
+              :
+             null
+          }
+          
+          {/* 2 pokemon card */}
+          { startGame ?
+            <Card pokemon={player2} />
+            :
+            null 
+          }
+
+        </div>
+        
+        <div className='flex justify-center'>
             <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={battle}>Random Battle</button>
-          </div>}
-    </div>
+          </div>
+    </div>}
     </div>
   )}
 
