@@ -1,32 +1,16 @@
 import React from 'react';
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { pokemonApi1 } from '../services/api1';
-import  Play  from "./Play";
+
+import Card from './Card';
 
 
-const Arena2 = () => {
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState();
-  const [startGame, setStartGame]=useState(false);
-
-  useEffect(() => {
-    const getPokemons = async () => {
-      await pokemonApi1().then(data => setData(prev => data ));
-      setLoading(prev => !prev);
-    };
-    getPokemons();
-  }, []);
-
-
-
-  if (data) {
-    //giconsole.log( ...data);
-  }
-
-
+const Arena = () => {
   
   const [pokemon, setPokemon] = useState();
+  const [startGame, setStartGame] = useState(false);
+  const [player1, setPlayer1] = useState();
+  const [player2, setPlayer2] = useState(); 
 
   useEffect(() => {
     axios.get(`https://lalala.cyclic.app/pokemon/`).then(({ data }) => {
@@ -35,157 +19,66 @@ const Arena2 = () => {
   }, []);
  
   if (!pokemon) return <h2>Loading...</h2>;
-  console.log(pokemon[0].base)
+
+  const battle = () => {
+    const random = Math.floor(Math.random() * 648);
+    setPlayer1(pokemon[random]);
+    setPlayer2(pokemon[random + 10]);
+    //console.log(player1.base.HP)
+    //console.log(player2.base.HP)
+    if (player1.base.HP > player2.base.HP) {
+      setStartGame(true)
+      setTimeout(`window.alert("Player one win")`, 1000);
+
+
+    } else if (player1.base.HP === player2.base.HP) {
+      setStartGame(true)
+      setTimeout(`window.alert("It's tie")`, 1000);
+      
+
+
+    } else {
+      setStartGame(true)
+      setTimeout(`window.alert("Player two win")`, 1000);
+
+
+    }
+        }
 
   return (
-    <div className="bg-yellow-500 arena-container">
-      <div className=" w-screen pb-8">
-        <div className="flex text-center justify-center text-white text-8xl">
-          <img
-            src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png"
-            className="items-center w-auto h-44 "
-            alt="Flowbite Logo"
-          />
+    <div className='bg-yellow-500 arena-container'>
+      <div className=' w-screen h-screen'>
+        <div className='flex text-center justify-center text-white text-8xl'>
+          <img src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png" className="items-center w-auto h-48 " alt="Flowbite Logo" />
         </div>
-        <div className="flex flex-col items-center pb-12">
-          <h5 class="inline-flex items-center px-8 py-4 text-m font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-700">
-              Start
-          </h5>
-        </div>
-        <div className="flex justify-center gap-20">
+          <div className='flex justify-around'>
           {/* 1 pokemon card */}
-          <div className="card">
-            <div className="pkmn__container">
-              <div className="pkmn__picture">
-                <div className="pkmn__cp">
-                  #<span>{pokemon[2].id}</span>
-                </div>
-                <img
-                  className="pkmn__png object-fill h-28"
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon[2].id}.svg`}
-                  alt={pokemon[2].name.english}
-                />
-                <div className="pkmn__exp-bar"></div>
-              </div>
-              <div className="pkmn__info">
-                <div className="pkmn__name">
-                  {pokemon[2].name.english}
-                  <p className="size-medium">
-                    {" "}
-                    Type: {pokemon[2].type[0]} {pokemon[2].type[1]}
-                  </p>
-                </div>
-                <div className="pkmn__data">
-                  <div className="pkmn__type">
-                    {pokemon[2].base.Attack}
-                    <p className="text--small">Atack</p>
-                  </div>
-                  <div className="pkmn__weight">
-                    {pokemon[2].base.Defense}
-                    <p className="text--small">Defense</p>
-                  </div>
-                  <div className="pkmn__type">
-                    {pokemon[2].base.Speed}
-                    <p className="text--small">Speed</p>
-                  </div>
-                  <div className="pkmn__height">
-                    {pokemon[2].base.HP}
-                    <p className="text--small">HP</p>
-                  </div>
-                </div>
-                <div className="pkmn__move space">
-                  <div>
-                    Sp Attack<p className="move--mtop">Sp Attack</p>
-                  </div>
-                  <div>{pokemon[2].base["Sp. Attack"]}</div>
-                </div>
-                <div className="pkmn__move">
-                  <div className=" move__special">
-                    Sp Defense<p className="move--mtop">Sp Defense</p>
-                  </div>
-                  <div className="">{pokemon[2].base["Sp. Defense"]}</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {
+            startGame ?
+              <Card pokemon={player1} />
+              :
+             null
+          }
+          
           {/* 2 pokemon card */}
-          <div className="card">
-            <div className="pkmn__container">
-              <div className="pkmn__picture">
-                <div className="pkmn__cp">
-                  #<span>{pokemon[201].id}</span>
-                </div>
-                <img
-                  className="pkmn__png object-fill h-28"
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon[201].id}.svg`}
-                  alt={pokemon[201].name.english}
-                />
-                <div className="pkmn__exp-bar"></div>
-              </div>
-              <div className="pkmn__info">
-                <div className="pkmn__name">
-                  {pokemon[201].name.english}
-                  <p className="size-medium">
-                    {" "}
-                    Type: {pokemon[201].type[0]} {pokemon[201].type[1]}
-                  </p>
-                </div>
-                <div className="pkmn__data">
-                  <div className="pkmn__type">
-                    {pokemon[201].base.Attack}
-                    <p className="text--small">Atack</p>
-                  </div>
-                  <div className="pkmn__weight">
-                    {pokemon[201].base.Defense}
-                    <p className="text--small">Defense</p>
-                  </div>
-                  <div className="pkmn__type">
-                    {pokemon[201].base.Speed}
-                    <p className="text--small">Speed</p>
-                  </div>
-                  <div className="pkmn__height">
-                    {pokemon[201].base.HP}
-                    <p className="text--small">HP</p>
-                  </div>
-                </div>
-                <div className="pkmn__move space">
-                  <div>
-                    Sp Attack<p className="move--mtop">Sp Attack</p>
-                  </div>
-                  <div>{pokemon[201].base["Sp. Attack"]}</div>
-                </div>
-                <div className="pkmn__move">
-                  <div className=" move__special">
-                    Sp Defense<p className="move--mtop">Sp Defense</p>
-                  </div>
-                  <div className="">{pokemon[201].base["Sp. Defense"]}</div>
-                </div>
-              </div>
-            </div>
+          { startGame ?
+            <Card pokemon={player2} />
+            :
+            null 
+          }
+
+        </div>
+        
+        {startGame ?
+          <div className='flex justify-center'>
+          <button type='submit' className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={battle}>Try Again</button>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-  {
-    loading ?
-      <p>loading...</p>
-      :
-      <div className='bg-yellow-500'>
-        <div className="flex justify-center">
-          <img src="http://2.bp.blogspot.com/-j_GR1Tq5tP0/VbY3ueWy4qI/AAAAAAAAIvE/wCjca8TaU6g/s1600/Logo%2BPokemon.png" className="items-center w-auto h-60 " alt="Flowbite Logo" />
-        </div>
-        <div className='text-center text-8xl'>
-          <h1>Battle Arena</h1>
-          <button onClick={()=>setStartGame(true)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Start</button>
-          {startGame ? 
-          <Play data={data}/>
           :
-          null}
-        </div>
-      </div>
-  }
+          <div className='flex justify-center'>
+            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={battle}>Random Battle</button>
+          </div>}
+    </div>
+    </div>
+  )}
 
-}
-
-export default Arena2
+export default Arena

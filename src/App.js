@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Nav ></Nav>
+      <Nav></Nav>
       <Routes>
         <Route index element={<Home />} />
         <Route path="pokemon/:id" element={<Pokemon2 />} />
